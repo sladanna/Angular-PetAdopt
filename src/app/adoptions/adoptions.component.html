@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><b>Pet Id</b></th>
+        <th scope="col"><b>Pet Name</b></th>
+        <th scope="col"><b>Name</b></th>
+        <th scope="col"><b>Contact</b></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let adoption of adoptionList.results">
+        <th scope="row">{{adoption.petId}}</th>
+        <td>{{adoption.petName}}</td>
+        <td>{{adoption.name}}</td>
+        <td>{{adoption.contact}}</td>
+        <td><button class="btn btn-primary" (click)="delete(adoption)">Approve</button></td>
+      </tr>
+    </tbody>
+  </table>
